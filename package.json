@@ -1,0 +1,25 @@
+{
+  "name": "sql_practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juan321654/sql_practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juan321654/sql_practice/issues"
+  },
+  "homepage": "https://github.com/Juan321654/sql_practice#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "faker": "^5.5.3",
+    "mysql": "^2.18.1"
+  }
+}
