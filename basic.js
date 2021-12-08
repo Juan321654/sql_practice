@@ -13,11 +13,15 @@ const connection = mysql.createConnection({
   database: DB_NAME,
 });
 
-let insQ = "INSERT INTO users (email, created_at) VALUES ?";
+const q =
+  "SELECT CURDATE() as dateOfTodayBoy, CURTIME() as timeOfTodayBoy, NOW()";
 
-connection.query(insQ, (err, res) => {
+connection.query(q, (err, res) => {
   if (err) throw err;
-  console.log(res);
+  console.log(res[0].dateOfTodayBoy);
+  console.log(res[0].timeOfTodayBoy);
+  console.log(res[0].NOW); // does not work;
+  console.log(res[0]["NOW()"]); // works;
 });
 
 connection.end();

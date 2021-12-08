@@ -13,9 +13,15 @@ const connection = mysql.createConnection({
   database: DB_NAME,
 });
 
+let data = [];
+
+for (let i = 0; i < 500; i++) {
+  data.push([faker.internet.email(), faker.date.past()]);
+}
+
 let insQ = "INSERT INTO users (email, created_at) VALUES ?";
 
-connection.query(insQ, (err, res) => {
+connection.query(insQ, [data], (err, res) => {
   if (err) throw err;
   console.log(res);
 });
